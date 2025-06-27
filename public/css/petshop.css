@@ -1,0 +1,89 @@
+/* Card utama detail produk */
+.petshop-card {
+    border-radius: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #ffe0b2;
+    background: #fff8e1;
+}
+.petshop-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255,152,0,0.18);
+    border-color: #ff9800;
+}
+
+/* Badge stok */
+.petshop-badge {
+    background: #ff9800;
+    color: #fff;
+    font-size: 0.85em;
+    border-radius: 12px;
+    padding: 3px 12px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    box-shadow: 0 2px 8px rgba(255,152,0,0.15);
+    z-index: 2;
+}
+
+/* Tombol utama petshop */
+.petshop-btn {
+    background: #ff9800;
+    color: #fff !important;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    transition: background 0.2s;
+}
+.petshop-btn:hover {
+    background: #fb8c00;
+    color: #fff !important;
+}
+
+/* Judul petshop */
+.petshop-title {
+    color: #ff9800;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+.petshop-card {
+    border-radius: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #ffe0b2;
+    background: #fff8e1;
+}
+.petshop-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255,152,0,0.18);
+    border-color: #ff9800;
+}
+.petshop-badge {
+    background: #ff9800;
+    color: #fff;
+    font-size: 0.85em;
+    border-radius: 12px;
+    padding: 3px 12px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    box-shadow: 0 2px 8px rgba(255,152,0,0.15);
+}
+.petshop-btn {
+    background: #ff9800;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    transition: background 0.2s;
+}
+.petshop-btn:hover {
+    background: #fb8c00;
+    color: #fff;
+}
+.petshop-title {
+    color: #ff9800;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
