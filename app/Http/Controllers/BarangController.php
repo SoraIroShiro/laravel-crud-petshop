@@ -23,6 +23,7 @@ class BarangController extends Controller
         $request->validate([
             'nama_barang' => 'required',
             'stok' => 'required|integer|min:0',
+            'harga' => 'required|integer|min:0',
             'deskripsi' => 'nullable|string',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ]);
@@ -57,6 +58,7 @@ class BarangController extends Controller
         $request->validate([
             'nama_barang' => 'required',
             'stok' => 'required|integer|min:0',
+            'harga' => 'required|integer|min:0',
             'deskripsi' => 'nullable|string',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
         ]);

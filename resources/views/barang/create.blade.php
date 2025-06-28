@@ -4,7 +4,7 @@
 <div class="container">
     <div class="form-row">
         <div class="col-lg-12">
-            <h3>Tambah Barang Petshop</h3>
+            <h3>Tambah Etalase Meong</h3>
         </div>
     </div>
     <br>
@@ -23,9 +23,9 @@
     <form action="{{ route('barang.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-            <label for="nama_barang" class="col-sm-2 col-form-label">Nama Barang</label>
+            <label for="nama_barang" class="col-sm-2 col-form-label">Jenis Ras Kucing</label>
             <div class="col-sm-10">
-                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Nama Barang" required>
+                <input type="text" name="nama_barang" class="form-control" id="nama_barang" placeholder="Jenis Ras Kucing" required>
             </div>
         </div>
         <div class="form-group row">
@@ -35,9 +35,15 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+            <div class="col-sm-10">
+                <input type="number" name="harga" class="form-control" id="harga" placeholder="Harga (Rp)" min="0" required>
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
             <div class="col-sm-10">
-                <textarea class="form-control" name="deskripsi" id="deskripsi" rows="4" placeholder="Deskripsi Barang"></textarea>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" rows="4" placeholder="Deskripsi Meong"></textarea>
             </div>
         </div>
         <div class="form-group row">
@@ -49,8 +55,8 @@
         </div>
         <hr>
         <div class="form-group">
-            <a href="{{ route('barang.index') }}" class="btn btn-success">Kembali</a>
-            <button type="submit" class="btn btn-primary">Tambah</button>
+            <a href="{{ route('barang.index') }}" class="btn btn-success">Back</a>
+            <button type="submit" class="btn btn-primary">Add</button>
         </div>
     </form>
 </div>

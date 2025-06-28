@@ -25,14 +25,17 @@
     
     <style>
         .navbar-petshop {
-            background: linear-gradient(90deg, #ff9800 0%, #ffe0b2 100%);
+            background: linear-gradient(90deg,#00a2ff 0%,rgb(0, 225, 255) 100%);
         }
-        .navbar-brand, .navbar-nav .nav-link, .dropdown-item {
-            color: #ff9800 !important;
+        .navbar-brand{
+            color:rgb(255, 255, 255) !important;
+            font-weight: bold;
+        } .navbar-nav .nav-link, .dropdown-item {
+            color:rgb(0, 0, 0) !important;
             font-weight: bold;
         }
         .navbar-brand:hover, .navbar-nav .nav-link:hover, .dropdown-item:hover {
-            color: #fb8c00 !important;
+            color:rgb(0, 17, 255) !important;
         }
     </style>
 </head>
@@ -71,7 +74,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('/barang') }}">
-                                        <i class="fas fa-box"></i> {{ __('Administrasi Barang') }}
+                                        <i class="fas fa-box"></i> {{ __('Manajemen Katalog') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

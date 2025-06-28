@@ -4,13 +4,13 @@
 <div class="container">
     <div class="form-row">
         <div class="col-lg-12">
-            <h3>Detail Barang Petshop</h3>
+            <h3>Detail Meong</h3>
         </div>
     </div>
     <br>
 
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Nama Barang</label>
+        <label class="col-sm-2 col-form-label">Nama Ras Kucing</label>
         <div class="col-sm-10">
             {{ $barang->nama_barang }}
         </div>
@@ -19,6 +19,12 @@
         <label class="col-sm-2 col-form-label">Stok</label>
         <div class="col-sm-10">
             {{ $barang->stok }}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Harga</label>
+        <div class="col-sm-10">
+            Rp {{ number_format($barang->harga, 0, ',', '.') }}
         </div>
     </div>
     <div class="form-group row">
@@ -39,7 +45,7 @@
     </div>
     <div class="form-group row">
         <div class="col-md-12">
-            <a href="{{ route('barang.index') }}" class="btn btn-success">Kembali</a>
+            <a href="{{ route('barang.index') }}" class="btn btn-success">Back</a>
         </div>
     </div>
 </div>

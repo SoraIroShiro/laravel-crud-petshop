@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <h3 class="mb-4 petshop-title animate__animated animate__fadeInDown">Marketplace Barang Petshop</h3>
+    <h3 class="mb-4 petshop-title animate__animated animate__fadeInDown text-center" style="">Etalase Petshop</h3>
     @if(isset($barangs) && count($barangs))
         <div class="row">
             @foreach($barangs as $i => $barang)
@@ -25,6 +25,7 @@
                             <p class="card-text text-muted" style="font-size: 0.95em; min-height: 48px;">
                                 {{ Str::limit($barang->deskripsi, 80) }}
                             </p>
+                            <p class="mb-1"><strong>Harga:</strong> Rp {{ number_format($barang->harga, 0, ',', '.') }}</p>
                         </div>
                         <div class="card-footer bg-white border-0 text-center">
                             <a href="{{ route('barang.show', $barang->id) }}" class="btn petshop-btn px-4 animate__animated animate__pulse animate__delay-1s">

@@ -8,7 +8,7 @@
         <div class="col-md-8">
             <div class="card petshop-card shadow-sm animate__animated animate__fadeInDown">
                 <div class="row no-gutters">
-                    <div class="col-md-5 d-flex align-items-center justify-content-center" style="background:#fff8e1;">
+                    <div class="col-md-5 d-flex align-items-center justify-content-center" style="background:#a4deff">
                         @if($barang->gambar)
                             <img src="{{ asset('storage/' . $barang->gambar) }}" class="img-fluid rounded m-3" alt="Gambar Barang" style="max-height:260px;">
                         @else
@@ -19,8 +19,9 @@
                         <div class="card-body">
                             <h3 class="card-title petshop-title">{{ $barang->nama_barang }}</h3>
                             <p class="mb-2"><strong>Stok:</strong> {{ $barang->stok }}</p>
+                            <p class="mb-2"><strong>Harga:</strong> Rp {{ number_format($barang->harga, 0, ',', '.') }}</p>
                             <p class="mb-3"><strong>Deskripsi:</strong><br>{{ $barang->deskripsi }}</p>
-                            <a href="{{ route('home') }}" class="btn btn-success mb-2">
+                            <a href="{{ route('home') }}" class="btn btn-primary mb-2 " style= "color: white;font-weight:bold;">
                                 <i class="fas fa-arrow-left"></i> Kembali
                             </a>
                             @php
@@ -28,7 +29,7 @@
                                 $pesan = rawurlencode("Halo, saya ingin membeli barang *{$barang->nama_barang}* di CatLover Petshop.");
                                 $wa_link = "https://wa.me/+6289630755146?text={$pesan}";
                             @endphp
-                            <a href="{{ $wa_link }}" target="_blank" class="btn btn-warning mb-2" style="color: black;font-weight:bold;">
+                            <a href="{{ $wa_link }}" target="_blank" class="btn  btn-success mb-2" style="color: white;font-weight:bold;">
                                 <i class="fab fa-whatsapp"></i> Beli via WhatsApp
                             </a>
                         </div>
@@ -64,6 +65,7 @@
                         <p class="card-text text-muted" style="font-size: 0.9em; min-height: 36px;">
                             {{ Str::limit($item->deskripsi, 40) }}
                         </p>
+                        <p class="mb-1"><strong>Harga:</strong> <br>Rp {{ number_format($item->harga, 0, ',', '.') }}</p>
                     </div>
                     <div class="card-footer bg-white border-0 text-center">
                         <a href="{{ route('barang.show', $item->id) }}" class="btn petshop-btn btn-sm px-3 animate__animated animate__pulse animate__delay-1s">

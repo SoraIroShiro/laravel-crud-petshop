@@ -7,12 +7,12 @@
         <div class="col-md-8">
             <div class="card shadow" style="border-radius: 20px;">
                 <div class="card-header text-center bg-white" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Cat Logo" width="60" class="mb-2">
-                    <h3 style="color:#ff9800; font-weight:bold; margin-bottom:0;">CatLover Petshop</h3>
+                    <img src="{{ asset('img/laughingcat.png') }}" alt="Cat Logo" width="60" class="mb-2">
+                    <h3 style="color:#00a2ff; font-weight:bold; margin-bottom:0;">CatLover Petshop</h3>
                     <small class="text-muted">Login to your favorite cat shop!</small>
                 </div>
 
-                <div class="card-body" style="background: #fff8e1;">
+                <div class="card-body" style="background:#a4deff;">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -53,10 +53,10 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn" style="background:#ff9800; color:white; font-weight:bold;">
+                                <button type="submit" class="btn" style="background:#00a2ff; color:white; font-weight:bold;">
                                     <i class="fas fa-paw"></i> {{ __('Login') }}
                                 </button>
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a style="color:black" class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>
@@ -64,7 +64,7 @@
                     </form>
                 </div>
                 <div class="card-footer text-center bg-white" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
-                    <small style="color:#ff9800;">&copy; {{ date('Y') }} CatLover Petshop</small>
+                    <small style="color:#00a2ff;">&copy; {{ date('Y') }} CatLover Petshop</small>
                 </div>
             </div>
         </div>

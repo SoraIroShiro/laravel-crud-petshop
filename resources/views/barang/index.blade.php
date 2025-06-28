@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h3>Daftar Barang Petshop</h3>
+            <h3>Meong Etalase</h3>
         </div>
         <div class="col-md-4 text-right">
             <a class="btn btn-success" href="{{ route('barang.create') }}">
-                <i class="fas fa-plus"></i> Tambah Barang
+                <i class="fas fa-plus"></i> Add
             </a>
             <a class="btn btn-warning" href="{{ route('home') }}">
                 <i class="fas fa-home"></i> Homepage
@@ -26,11 +26,12 @@
         <thead>
             <tr>
                 <th width="40px">No.</th>
-                <th>Nama Barang</th>
+                <th>Jenis Ras Kucing</th>
                 <th>Stok</th>
+                <th>Harga</th>
                 <th>Deskripsi</th>
                 <th>Gambar</th>
-                <th width="210px">Aksi</th>
+                <th width="210px">Kelola</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $barang->nama_barang }}</td>
                 <td>{{ $barang->stok }}</td>
+                <td>Rp {{ number_format($barang->harga, 0, ',', '.') }}</td>
                 <td>{{ $barang->deskripsi }}</td>
                 <td>
                     @if($barang->gambar)
@@ -49,7 +51,7 @@
                 </td>
                 <td>
                     <a class="btn btn-sm btn-success" href="{{ route('barang.detail', $barang->id)}}">Show</a>
-                    <a class="btn btn-sm btn-warning" href="{{ route('barang.edit', $barang->id)}}">Edit</a>
+                    <a class="btn btn-sm btn-warning" href="{{ route('barang.edit', $barang->id)}}">Update</a>
                     <form action="{{ route('barang.destroy', $barang->id) }}" method="post" style="display:inline;">
                         @csrf
                         @method('DELETE')

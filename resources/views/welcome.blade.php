@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <style>
         body {
-            background: linear-gradient(120deg, #fff8e1 0%, #ffe0b2 100%);
+            background: linear-gradient(120deg,rgb(154, 218, 255) 0%,rgb(0, 110, 236) 100%);
             font-family: 'Nunito', sans-serif;
             margin: 0;
             min-height: 100vh;
@@ -31,13 +31,13 @@
         }
         .landing-logo {
             font-size: 3.5rem;
-            color: #ff9800;
+            color: #00a2ff;
             margin-bottom: 12px;
         }
         .landing-title {
             font-size: 2.2rem;
             font-weight: 700;
-            color: #ff9800;
+            color: #00a2ff;
             margin-bottom: 8px;
         }
         .landing-subtitle {
@@ -46,7 +46,7 @@
             margin-bottom: 28px;
         }
         .landing-btn {
-            background: #ff9800;
+            background: #00a2ff;
             color: #fff;
             border: none;
             border-radius: 22px;
@@ -60,7 +60,7 @@
             display: inline-block;
         }
         .landing-btn:hover {
-            background: #fb8c00;
+            background: rgb(0, 17, 255);
             color: #fff;
         }
         .landing-footer {
@@ -91,7 +91,7 @@
                 <i class="fas fa-sign-in-alt"></i> Login untuk Marketplace
             </a>
         </div>
-        <div class="landing-footer">
+        <div class="landing-footer" style="color: black;">
             &copy; {{ date('Y') }} CatLover Petshop. All rights reserved.
         </div>
     </div>

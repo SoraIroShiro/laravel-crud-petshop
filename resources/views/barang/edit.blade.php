@@ -4,7 +4,7 @@
 <div class="container">
     <div class="form-row">
         <div class="col-lg-12">
-            <h3>Edit Barang Petshop</h3>
+            <h3>Edit Data Meong</h3>
         </div>
     </div>
     <br>
@@ -24,7 +24,7 @@
         @csrf
         @method('PUT')
         <div class="form-group row">
-            <label for="nama_barang" class="col-sm-2 col-form-label">Nama Barang</label>
+            <label for="nama_barang" class="col-sm-2 col-form-label">Jenis Ras Kucing</label>
             <div class="col-sm-10">
                 <input type="text" name="nama_barang" class="form-control" id="nama_barang" value="{{ $barang->nama_barang }}" required>
             </div>
@@ -33,6 +33,12 @@
             <label for="stok" class="col-sm-2 col-form-label">Stok</label>
             <div class="col-sm-10">
                 <input type="number" name="stok" class="form-control" id="stok" value="{{ $barang->stok }}" min="0" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+            <div class="col-sm-10">
+                <input type="number" name="harga" class="form-control" id="harga" value="{{ $barang->harga }}" min="0" required>
             </div>
         </div>
         <div class="form-group row">
@@ -53,8 +59,8 @@
         </div>
         <hr>
         <div class="form-group">
-            <a href="{{ route('barang.index') }}" class="btn btn-success">Kembali</a>
-            <button type="submit" class="btn btn-primary">Edit</button>
+            <a href="{{ route('barang.index') }}" class="btn btn-success">Back</a>
+            <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </form>
 </div>
